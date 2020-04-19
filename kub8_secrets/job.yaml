@@ -1,14 +1,13 @@
-apiVersion: v1
 kind: Pod
 metadata:
-  name: podtest
+  name: pod1
 spec:
   containers:
-  - name: excelpoc
-    image: docker.io/rishab31/kubsecrets:latest
-    env:
-      - name: random
-        valueFrom:
-          secretKeyRef:
-            name: mysecret
-            key: username
+    - name: poc
+      image: docker.io/rishab31/kubsecrets:latest
+      env:
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: AWS_ACCESS_KEY
