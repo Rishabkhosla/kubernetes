@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podtest
+spec:
+  containers:
+    - name: excelpoc
+      image: docker.io/rishab31/spark_excel_poc:latest
+      envFrom:
+        - secretRef:
+            name: plaintext-secret
