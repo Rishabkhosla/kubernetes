@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+spec:
+  containers:
+    - name: testjob
+      image: docker.io/rishab31/kubsecrets:latest
+      envFrom:
+        - secretRef:
+            name: plaintext-secret
