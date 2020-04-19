@@ -8,4 +8,5 @@ spec:
       image: docker.io/rishab31/kubsecrets:latest
       envFrom:
         - secretRef:
-            name: plaintext-secret
+            name: ss
+            key: mysecret
