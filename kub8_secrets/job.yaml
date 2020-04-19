@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: excelpoc
-      image: docker.io/rishab31/spark_excel_poc:latest
+      image: docker.io/rishab31/kubsecrets:latest
       envFrom:
         - secretRef:
             name: plaintext-secret
