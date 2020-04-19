@@ -4,9 +4,11 @@ metadata:
   name: podtest
 spec:
   containers:
-    - name: excelpoc
-      image: docker.io/rishab31/kubsecrets:latest
-      envFrom:
-        - secretRef:
-            name: ss
-            key: mysecret
+  - name: excelpoc
+    image: docker.io/rishab31/kubsecrets:latest
+    env:
+      - name: random
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: username
